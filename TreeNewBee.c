@@ -40,8 +40,6 @@ char* n4[] = {
     "体验度量","信息屏障"
 };
 
-
-
 void shuffleArray(char* pArr[], size_t len)
 {
     int i = 0;
