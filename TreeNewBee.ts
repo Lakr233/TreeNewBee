@@ -2,7 +2,7 @@ export function generatorNewBee(count?: number) {
   if (count <= 0 || !+count) {
     return
   }
-  const arr = []
+  const arr: string[] = []
   for (let i = 0; i < count; i++) {
     arr.push(generator())
   }
@@ -63,7 +63,7 @@ export function generator() {
 
   return res
 }
-function shuffle(array: any[]) {
+function shuffle<T = unknown>(array: T[]): T[] {
   let currentIndex = array.length,
     temporaryValue,
     randomIndex
