@@ -68,6 +68,9 @@ void shuffleArray(char* pArr[], size_t len)
 int main(int argc, char *argv[])
 {
     shuffleArray(v, LA(v));
+    shuffleArray(n2, LA(n2));
+    shuffleArray(n3, LA(n3));
+    shuffleArray(n4, LA(n4));
     printf(
            "%s是%s%s，%s行业%s。"\
            "%s是%s%s%s，通过%s和%s达到%s。"\
