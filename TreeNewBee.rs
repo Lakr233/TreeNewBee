@@ -4,7 +4,7 @@ use std::collections::HashMap;
 
 
 fn make_tree_new_bee_ppt() {
-	let mut out_str = "{n40}是{v0}{n41}，{v1}行业{n30}。{n42}是{v2}{n20}{n43}，通过{n31}和{n32}达到{n33}。{n44}是在{n45}采用{n21}打法达成{n46}。{n47}{n48}作为{n22}为产品赋能，{n49}作为{n23}的评判标准。亮点是{n24}，优势是{n25}。{v3}整个{n410}，{v4}{n26}{v5}{n411}。{n34}是{n35}达到{n36}标准。".to_owned();
+    let mut out_str = "{n40}是{v0}{n41}，{v1}行业{n30}。{n42}是{v2}{n20}{n43}，通过{n31}和{n32}达到{n33}。{n44}是在{n45}采用{n21}打法达成{n46}。{n47}{n48}作为{n22}为产品赋能，{n49}作为{n23}的评判标准。亮点是{n24}，优势是{n25}。{v3}整个{n410}，{v4}{n26}{v5}{n411}。{n34}是{n35}达到{n36}标准。".to_owned();
 
     let mut rng = thread_rng();
     let mut word_count:HashMap<&str, usize> = HashMap::new();
@@ -45,13 +45,11 @@ fn make_tree_new_bee_ppt() {
         for i in 0..v {
             let word = word_map.get(k).unwrap().get(i).unwrap();
             let t = format!("{{{}{}}}",k,i);
-            //println!("k: {}, i: {}, word: {}", k, i, word);
             out_str = out_str.replace::<_>(&t, word);
         }
     }
 
     println!("{}", &out_str);
-
 }
 
 
