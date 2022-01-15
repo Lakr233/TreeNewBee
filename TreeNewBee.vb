@@ -24,12 +24,12 @@ Public Module Program
 	End Sub
 	
 	Function Random(stringList As List(Of String), number As Integer) As List(Of String)
-		Dim i,random As Integer
+		Dim i,randomstr As Integer
 		Dim randomList As New List(Of String)
 		For i=0 To number-1
-			random = New System.Random().Next(i*CInt(stringList.Count/number), (i+1)*CInt(stringList.Count/number))
-			If random>stringList.Count-1 Then random = stringList.Count-1
-			randomList.Add(stringList(random))
+			randomstr = New System.Random().Next(i*CInt(stringList.Count/number), (i+1)*CInt(stringList.Count/number))
+			If randomstr > stringList.Count-1 Then randomstr = stringList.Count-1
+			randomList.Add(stringList(randomstr))
 		Next i
 		Return randomList
 	End Function
